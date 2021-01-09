@@ -1,12 +1,14 @@
 $gray1 : #333;
 $gray2 : #4F4F4F;
-$gray4 : #4F4F4F;
 $gray3 : #828282;
 $gray4 : #BDBDBD;
+$gray5 : #E0E0E0;
 $gray6 : #F2F2F2;
 $gray7 : #A9A9A9;
 $light_blue : #2D9CDB;
 $bg_footer : #100E1D;
+$green : #27AE60;
+$red : #EB5757;
 
 $heebo_font : Heebo;
 $poppins_font : Poppins;
@@ -234,10 +236,10 @@ main {
 
     .hero {
         width: 95%;
-        margin: 0 auto 5rem;
+        margin: 0 auto 10rem;
 
         .w75 {
-            width: 75%;
+            width: 70%;
             margin: auto;
 
         }
@@ -320,10 +322,96 @@ main {
     .container {
         width: 75%;
         margin: auto;
-        border: 2px solid red;
+
+
+        @media screen and (max-width : 730px) {
+            width: 88%;
+        }
     }
+
     #services {
-        border: 2px solid blue;
+
+        h1 {
+            font-size: 3.6rem;
+            font-weight: 500;
+        }
+
+        .grid_services {
+            // border: 2px solid red;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap : 2rem;
+            margin: 5rem 0;
+
+            .service {
+                padding: 3.7rem 3rem;
+                border-radius: 2.4rem;
+
+                &:hover {
+                    box-shadow: 0 0 20px rgba($color: #000000, $alpha: .1);
+
+                    button {
+                        background-color: $light_blue;
+                        color: #FFF;
+                    }
+                }
+
+                .icon {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 1rem;
+                    margin-bottom: 2.8rem;
+
+                    svg {
+                        fill: #fff;
+                    }
+                }
+
+                &:first-child .icon {
+                    background-color: $light_blue;
+                }
+                &:nth-child(2) .icon {
+                    background-color: $green;
+                }
+                &:nth-child(3) .icon {
+                    background-color: $red;
+                }
+
+                h3 {
+                    font-size: 1.8rem;
+                    font-weight: 700;
+                }
+
+                p {
+                    color: $gray2;
+                    font-size: 1.5rem;
+                    margin: 2.4rem 0 3rem;
+                }
+
+                button {
+                    border: none;
+                    background-color: $gray5;
+                    color: $gray3;
+                    padding: 1rem 1.5rem;
+                    border-radius: 1rem;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        @media screen and (max-width : 730px) {
+            
+            h1 {
+                font-size: 2.4rem;
+            }
+            .grid_services {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(3, 1fr);
+            }
+        }
     }
     
 
