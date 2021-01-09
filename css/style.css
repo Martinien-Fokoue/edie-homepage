@@ -77,6 +77,47 @@ header nav ul li:first-child {
   margin-left: 0;
 }
 
+header .hamburger_btn {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  outline: none;
+  display: none;
+}
+
+header .hamburger_btn span {
+  height: 2px;
+  width: 1em;
+  position: relative;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(currentColor), to(currentColor));
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  font-size: 32px;
+  color: #000;
+}
+
+header .hamburger_btn span::before, header .hamburger_btn span::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: inherit;
+  border-radius: inherit;
+}
+
 header .hamburger_btn span::before {
   -webkit-transform: translateY(-0.8rem) rotate(0deg);
           transform: translateY(-0.8rem) rotate(0deg);
@@ -100,13 +141,13 @@ header .hamburger_btn.active span {
 }
 
 header .hamburger_btn.active span::before {
-  -webkit-transform: translateY(0rem) rotate(-45deg);
-          transform: translateY(0rem) rotate(-45deg);
+  -webkit-transform: translateY(0rem) rotate(45deg);
+          transform: translateY(0rem) rotate(45deg);
 }
 
 header .hamburger_btn.active span::after {
-  -webkit-transform: translateY(0rem) rotate(45deg);
-          transform: translateY(0rem) rotate(45deg);
+  -webkit-transform: translateY(0rem) rotate(-45deg);
+          transform: translateY(0rem) rotate(-45deg);
 }
 
 @media screen and (max-width: 730px) {
