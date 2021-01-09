@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  overflow: hidden;
+}
+
+header {
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+header .header_container {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 95%;
+  margin: auto;
+}
+
+header .logo {
+  font-size: 3.6rem;
+  font-family: Heebo;
+}
+
+header nav {
+  font-family: Poppins;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header nav ul li {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-left: 6rem;
+}
+
+header nav ul li:first-child {
+  margin-left: 0;
+}
+
+header .hamburger_btn span::before {
+  -webkit-transform: translateY(-0.8rem) rotate(0deg);
+          transform: translateY(-0.8rem) rotate(0deg);
+  -webkit-transition: -webkit-transform .2s ease-in;
+  transition: -webkit-transform .2s ease-in;
+  transition: transform .2s ease-in;
+  transition: transform .2s ease-in, -webkit-transform .2s ease-in;
+}
+
+header .hamburger_btn span::after {
+  -webkit-transform: translateY(0.8rem) rotate(0deg);
+          transform: translateY(0.8rem) rotate(0deg);
+  -webkit-transition: -webkit-transform .2s ease-in;
+  transition: -webkit-transform .2s ease-in;
+  transition: transform .2s ease-in;
+  transition: transform .2s ease-in, -webkit-transform .2s ease-in;
+}
+
+header .hamburger_btn.active span {
+  background-size: 0%;
+}
+
+header .hamburger_btn.active span::before {
+  -webkit-transform: translateY(0rem) rotate(-45deg);
+          transform: translateY(0rem) rotate(-45deg);
+}
+
+header .hamburger_btn.active span::after {
+  -webkit-transform: translateY(0rem) rotate(45deg);
+          transform: translateY(0rem) rotate(45deg);
+}
+
+@media screen and (max-width: 730px) {
+  header .header_container {
+    height: 70px;
+  }
+  header .logo {
+    font-size: 2.5rem;
+  }
+  header .hamburger_btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header nav {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */
