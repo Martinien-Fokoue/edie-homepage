@@ -30,6 +30,7 @@ body {
 
 header {
     box-shadow: 0 0 10px rgba($color: #000000, $alpha: .2);
+    width: 100%;
 
     .header_container {
         height: 100px;
@@ -139,6 +140,7 @@ header {
             position: absolute;
             left: 0;
             top: 0;
+            bottom: 0;
             height: 100%;
             width: 100%;
             background-color: $gray1;
@@ -146,10 +148,8 @@ header {
             display: flex;
             align-items: center;
             justify-content: center;
-            opacity: 0;
-            transform: scale(2);
-            transition: transform .2s ease-out, opacity .2s ease-in;
-            transform-origin: bottom;
+            transform: translateY(-100%);
+            transition: transform .2s ease-out;
 
             ul {
                 flex-direction: column;
@@ -163,8 +163,7 @@ header {
             }
 
             &.active {
-                opacity: 1;
-                transform: scale(1);
+                transform: translateY(0);
             }
         }
     }
