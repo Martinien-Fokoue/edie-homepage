@@ -1,5 +1,5 @@
 let hamburgerBtn = document.querySelector('.hamburger_btn'),
-    nav = document.querySelector('header');
+    nav = document.querySelector('nav');
 
     hamburgerBtn.addEventListener('click', function(){
         this.classList.toggle('active');

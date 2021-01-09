@@ -36,7 +36,7 @@ header {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 95%;
+        width: 90%;
         margin: auto;
     }
 
@@ -66,8 +66,8 @@ header {
     }
 
     .hamburger_btn {
-        width: 30px;
-        height: 30px;
+        width: 25px;
+        height: 25px;
         border: none;
         background: transparent;
         cursor: pointer;
@@ -76,6 +76,7 @@ header {
         justify-content: center;
         outline: none;
         display: none;
+        z-index: 100;
 
         span {
             height: 2px;
@@ -110,6 +111,7 @@ header {
         &.active {
             span {
                 background-size: 0%;
+                background-image: linear-gradient(white, white);
 
                 &::before {
                     transform: translateY(0rem) rotate(45deg);
@@ -127,14 +129,43 @@ header {
             height: 70px;
         }
         .logo {
-            font-size: 2.5rem;
+            font-size: 2.3rem;
         }
 
         .hamburger_btn {
             display: flex;
         }
         nav {
-            display: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color: $gray1;
+            color: #FFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transform: scale(2);
+            transition: transform .2s ease-out, opacity .2s ease-in;
+            transform-origin: bottom;
+
+            ul {
+                flex-direction: column;
+                height: 60%;
+               
+                li {
+                    margin-left: 0;
+                    text-transform: uppercase;
+                    font-weight: 400;
+                }
+            }
+
+            &.active {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
     }
 }
