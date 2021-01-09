@@ -1,12 +1,32 @@
+$gray1 : #333;
+$gray4 : #BDBDBD;
+$gray6 : #F2F2F2;
+$light_blue : #2D9CDB;
+$bg_footer : #100E1D;
+
+$heebo_font : Heebo;
+$poppins_font : Poppins;
+
+%logo {
+    font-size: 3.6rem;
+    a {
+        font-family: $heebo_font !important;
+    }
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: $poppins_font;
 }
 html {
     font-size: 62.5%;
-}body {
-    height: 100vh;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -19,16 +39,7 @@ ul {
     list-style: none;
 }
 
-$gray1 : #333;
 
-$heebo_font : Heebo;
-$poppins_font : Poppins;
-
-html, body {
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-}
 
 header {
     box-shadow: 0 0 10px rgba($color: #000000, $alpha: .2);
@@ -39,25 +50,25 @@ header {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 90%;
+        width: 95%;
         margin: auto;
     }
 
     .logo {
-        font-size: 3.6rem;
-        font-family: $heebo_font;
+        @extend %logo;
     }
 
     nav {
-        font-family: Poppins;
-
+        display: flex;
+        align-items: center;
+        justify-content: center;
         ul {
             display: flex;
             align-items: center;
             justify-content: space-between;
 
             li {
-                font-size: 2rem;
+                font-size: 1.7rem;
                 font-weight: 500;
                 margin-left: 6rem;
 
@@ -130,6 +141,7 @@ header {
 
         .header_container {
             height: 70px;
+            width: 92%;
         }
         .logo {
             font-size: 2.3rem;
@@ -147,10 +159,8 @@ header {
             width: 100%;
             background-color: $gray1;
             color: #FFF;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             opacity: 0;
+            visibility: hidden;
             transform: translateY(-100%);
             transition: transform .2s cubic-bezier(0,.8,0,1.48), opacity .4s ease-out;
 
@@ -168,7 +178,107 @@ header {
             &.active {
                 transform: translateY(0);
                 opacity: 1;
+                visibility: visible;
             }
+        }
+    }
+}
+
+footer {
+    background-color: $bg_footer;
+    color: $gray6;
+    font-size: 1.8rem;
+
+    .footer_container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 85%;
+        margin: auto;
+    }
+
+    .footer_container .links_contacts {
+        flex: .8;
+        li {
+            margin-bottom: .5rem;
+        }
+    }
+
+    .footer_container .icons_contacts {
+        flex: .8;
+        .logo {
+            margin-bottom: .5rem;
+            @extend %logo;
+        }
+
+        .socials_icons {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: .5rem;
+            }
+        }
+    }
+
+    .footer_container .form_contacts {
+        flex: 1;
+        label {
+            font-size: 1.6rem;
+        }
+
+        .input_field {
+            height: 50px;
+            // width: 300px;
+            margin-top: .5rem;
+            position: relative;
+
+            input {
+                width: 100%;
+                height: 100%;
+                border-radius: 1rem;
+                background-color: #FFF;
+                border: none;
+                padding-left: 20px;
+                font-family: $poppins_font;
+                color : $gray1;
+
+                &::placeholder {
+                    color: $gray4;
+                }
+            }
+
+            button {
+                position: absolute;
+                color: $gray6;
+                background-color: $light_blue;
+                border: none;
+                padding: 1rem 1.8rem;
+                border-radius: 1rem;
+                right: .3rem;
+                top: .3rem;
+                bottom: .3rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+
+    .attribution {
+        border: 2px solid red;
+    }
+
+    @media screen and (max-width : 730px) {
+        
+        .footer_container {
+            width: 90%;
+            flex-direction: column;
+            align-items: flex-start;
         }
     }
 }
