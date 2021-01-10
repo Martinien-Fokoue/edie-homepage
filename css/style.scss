@@ -413,6 +413,138 @@ main {
             }
         }
     }
+
+    #works {
+        margin-bottom: 5rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+
+        h2 {
+            color: $gray1;
+            font-size: 3rem;
+            font-weight: 500;
+            margin-bottom: 5rem;
+            align-self: flex-start;
+            width: 45%;
+        }
+
+        .work_container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 10rem;
+        }
+
+        .work {
+            font-weight: 500;
+            width: 49%;
+            box-shadow: 0 0 5px rgba($color: #000000, $alpha: .2);
+            padding: 1.5rem;
+            border-radius: 1rem;
+
+            &:nth-child(2) {
+                transform: translateY(-130px);
+            }
+
+            img {
+                width: 100%;
+                border-radius: 1.2rem;
+            }
+            .category {
+                font-size: 1.4rem;
+                color: $gray3;
+                margin: .2rem 0;
+            }
+            .name {
+                font-size: 1.8rem;
+                color: $gray1;
+            }
+        }
+
+        a {
+            align-self: flex-end;
+            color: $light_blue;
+            font-weight: 500;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2rem;
+
+            & svg {
+                fill : $light_blue;
+                margin-left: .5rem;
+            }
+        }
+
+        @media screen and (max-width : 730px) {
+            
+            h2 {
+                width: 100%;
+                font-size: 2rem;
+            }
+
+            .work_container {
+                flex-direction: column;
+                margin-top: 0;
+            }
+
+            .work {
+                margin-top: 2rem;
+                width : 100%;
+            }
+
+            .work:nth-child(2) {
+                transform: translateY(0);
+            }
+
+            a {
+                font-size : 1.6rem;
+                align-self : flex-start;
+            }
+        }
+    }
+
+    #clients {
+        
+        .testimonial {
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 2.5rem;
+            color: $gray1;
+
+            @media screen and (max-width : 730px) {
+                font-size: 1.7rem;
+            }
+        }
+
+        .user_infos {
+            display: flex;
+
+            img {
+                border-radius: 1rem;
+                width: 60px;
+            }
+
+            .infos {
+                font-weight: 500;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                margin-left: 2rem;
+                .user_name {
+                    color: $gray1;
+                    font-size : 2rem;
+                }
+                .description {
+                    color: $gray3;
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
     
 
 }
