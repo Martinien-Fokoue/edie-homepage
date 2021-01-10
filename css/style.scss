@@ -418,8 +418,8 @@ main {
         margin-bottom: 5rem;
         display: flex;
         justify-content: flex-start;
-        align-items: flex-start;
         flex-direction: column;
+
 
         h2 {
             color: $gray1;
@@ -433,8 +433,8 @@ main {
         .work_container {
             display: flex;
             align-items: center;
-            justify-content: space-between;
             margin-top: 10rem;
+
         }
 
         .work {
@@ -507,6 +507,65 @@ main {
         }
     }
 
+    #team {
+        margin-bottom: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+
+        .description {
+            font-weight : 500;
+            margin-right: 4rem;
+            a {
+                font-size: 1.6rem;
+                color: $red;
+            }
+
+            h3 {
+                font-size: 3rem;
+                margin: 1rem 0;
+            }
+
+            p {
+                font-size: 1.6rem;
+            }
+        }
+
+        .images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "grid1 grid2";
+            gap: 1rem;
+            margin-top: 2rem;
+
+            .grid1 {
+                width : 100%;
+                display : flex;
+                align-items : center;
+                grid-area : grid1;
+            }
+
+            .grid2 {
+                width : 100%;
+                grid-area : grid2;
+                display: grid;
+                gap: 1rem;
+            }
+
+            img {
+                border-radius: 2rem;
+                width : 100%;
+            }
+        }
+
+        @media screen and (max-width : 730px) {
+            flex-direction: column;
+            align-items: flex-start;
+            
+        }
+    }
+
     #clients {
         
         .testimonial {
@@ -514,6 +573,7 @@ main {
             font-weight: 500;
             margin-bottom: 2.5rem;
             color: $gray1;
+
 
             @media screen and (max-width : 730px) {
                 font-size: 1.7rem;
@@ -523,9 +583,10 @@ main {
         .user_infos {
             display: flex;
 
+
             img {
                 border-radius: 1rem;
-                width: 60px;
+                width: 65px;
             }
 
             .infos {
