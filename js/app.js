@@ -7,11 +7,11 @@ let hamburgerBtn = document.querySelector('.hamburger_btn'),
         nav.classList.toggle('active');
     });
 
-nav_links.forEach(link => {
-    link.addEventListener('click', function(){
-        if(nav.classList.contains('active')){
-            nav.classList.remove('active');
-            hamburgerBtn.classList.remove('active');
-        }
+    nav_links.forEach(link => {
+        link.addEventListener('click', function(){
+            if(nav.classList.contains('active')){
+                nav.classList.remove('active');
+                hamburgerBtn.classList.remove('active');
+            }
+        });
     });
-});

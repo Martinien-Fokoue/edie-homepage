@@ -67,6 +67,7 @@ $poppins_font : Poppins;
 }
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 html, body {
@@ -451,7 +452,9 @@ main {
         .work_container {
             display: flex;
             align-items: center;
+            justify-content: space-between;
             margin-top: 10rem;
+
 
         }
 
@@ -600,6 +603,8 @@ main {
 
         .user_infos {
             display: flex;
+            align-items: flex-start;
+            justify-content : flex-start;
 
 
             img {
@@ -616,6 +621,7 @@ main {
                 .user_name {
                     color: $gray1;
                     font-size : 2rem;
+                    margin-bottom: 0.4em;
                 }
                 .description {
                     color: $gray3;
@@ -624,8 +630,6 @@ main {
             }
         }
     }
-    
-
 }
 
 footer {
