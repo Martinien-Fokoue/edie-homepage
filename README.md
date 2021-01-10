@@ -39,14 +39,14 @@
 
 _Desktop view_
 
-![screenshot Desktop](images/desktopview.png)
+![screenshot Desktop](/images/desktopview.png)
 
 
 
 _Mobile view_
 
-![screenshot Mobile](images/mobileview.png)
-![screenshot Mobile](images/mobileviewmenu.png)
+![screenshot Mobile](/images/mobileview.png)
+![screenshot Mobile](/images/mobileviewmenu.png)
 
 
 
