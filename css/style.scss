@@ -201,7 +201,7 @@ ul {
             left: 0;
             top: 0;
             bottom: 0;
-            height: 100%;
+            height: 100vh;
             width: 100%;
             background-color: $gray1;
             color: #FFF;
@@ -223,7 +223,7 @@ ul {
 
             &.active {
                 transform: translateY(0);
-                opacity: 1;
+                opacity: .9;
                 visibility: visible;
             }
         }
@@ -346,8 +346,11 @@ main {
             .service {
                 padding: 3.7rem 3rem;
                 border-radius: 2.4rem;
+                box-shadow: 0 0 5px rgba($color: #000000, $alpha: .1);
+                background-color: transparent;
 
                 &:hover {
+                    background-color: rgb(255, 248, 248);
                     box-shadow: 0 0 20px rgba($color: #000000, $alpha: .1);
 
                     button {
@@ -370,14 +373,29 @@ main {
                     }
                 }
 
-                &:first-child .icon {
-                    background-color: $light_blue;
+                &:first-child {
+                    &:hover {
+                        background-color: rgb(246, 250, 255);
+                    }
+                    .icon {
+                        background-color: $light_blue;
+                    }
                 }
-                &:nth-child(2) .icon {
-                    background-color: $green;
+                &:nth-child(2){
+                    &:hover {
+                        background-color: rgb(246, 255, 246);
+                    }
+                    .icon {
+                        background-color: $green;
+                    }
                 }
-                &:nth-child(3) .icon {
-                    background-color: $red;
+                &:nth-child(3){
+                    &:hover {
+                        background-color: rgb(255, 238, 238);
+                    }
+                    .icon {
+                        background-color: $red;
+                    }
                 }
 
                 h3 {
@@ -586,7 +604,7 @@ main {
 
             img {
                 border-radius: 1rem;
-                width: 65px;
+                width: 6.5rem;
             }
 
             .infos {

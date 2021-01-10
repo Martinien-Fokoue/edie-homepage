@@ -224,7 +224,7 @@ ul {
     left: 0;
     top: 0;
     bottom: 0;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     background-color: #333;
     color: #FFF;
@@ -252,7 +252,7 @@ ul {
   .header nav.active {
     -webkit-transform: translateY(0);
             transform: translateY(0);
-    opacity: 1;
+    opacity: .9;
     visibility: visible;
   }
 }
@@ -363,9 +363,13 @@ main #services .grid_services {
 main #services .grid_services .service {
   padding: 3.7rem 3rem;
   border-radius: 2.4rem;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
 }
 
 main #services .grid_services .service:hover {
+  background-color: #fff8f8;
   -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
@@ -395,12 +399,24 @@ main #services .grid_services .service .icon svg {
   fill: #fff;
 }
 
+main #services .grid_services .service:first-child:hover {
+  background-color: #f6faff;
+}
+
 main #services .grid_services .service:first-child .icon {
   background-color: #2D9CDB;
 }
 
+main #services .grid_services .service:nth-child(2):hover {
+  background-color: #f6fff6;
+}
+
 main #services .grid_services .service:nth-child(2) .icon {
   background-color: #27AE60;
+}
+
+main #services .grid_services .service:nth-child(3):hover {
+  background-color: #ffeeee;
 }
 
 main #services .grid_services .service:nth-child(3) .icon {
@@ -656,7 +672,7 @@ main #clients .user_infos {
 
 main #clients .user_infos img {
   border-radius: 1rem;
-  width: 65px;
+  width: 6.5rem;
 }
 
 main #clients .user_infos .infos {
